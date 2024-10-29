@@ -8,7 +8,7 @@ import { leerIPsDeExcel, crearArchivoExcel, eliminarArchivo } from './excelHandl
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const upload = multer({ dest: 'uploads/' });
 
 // Configuración de CORS para permitir todas las IPs
@@ -59,4 +59,4 @@ app.post('/verificar-ips', upload.single('file'), async (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(PORT, () => console.log(`'Servidor corriendo en el puerto ${PORT}'`));
+app.listen(port, () => console.log(`'Servidor corriendo en el puerto ${PORT}'`));
