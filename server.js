@@ -59,4 +59,4 @@ app.post('/verificar-ips', upload.single('file'), async (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(port, () => console.log(`'Servidor corriendo en el puerto ${PORT}'`));
+app.listen(port, () => console.log(`'Servidor corriendo en el puerto ${port}'`));
